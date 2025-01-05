@@ -12,3 +12,5 @@
 // 		videoPlayer.play();
 // 	});
 // });
+
+document.querySelector('#video-burger').addEventListener('click', () => document.querySelector('.video_ul').classList.toggle('transparent'))

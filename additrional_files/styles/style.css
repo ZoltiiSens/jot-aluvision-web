@@ -19,6 +19,10 @@ body {
 	font-family: Lato, sans-serif;
 }
 
+#video-burger {
+	display: none;
+}
+
 main.index {
 	padding: 20px;
 	height: 100vh;
@@ -64,6 +68,17 @@ main.index nav .nav-ul a:hover {
 
 main.index .logo-down {}
 
+@media screen and (max-width: 1050px) {
+	main.index nav {
+		flex-direction: column;
+	}
+	main.index nav .nav-ul {
+		flex-direction: column;
+	}
+	main.index nav .nav-ul a {
+		text-align: center;
+	}
+}
 
 /* -------------------- MENU PAGES -------------------- */
 
@@ -87,6 +102,17 @@ main.videos nav {
 	display: flex;
 	align-items: center;
 	padding: 15px;
+}
+main.videos nav .logo {
+	height: 100%;
+	min-width: 100px;
+}
+
+main.videos nav .logo .img-wrapper {
+	height: 100%;
+}
+main.videos nav .logo .img-wrapper img {
+	height: 100%;
 }
 
 main.videos nav ul {
@@ -127,7 +153,8 @@ main.videos nav ul li a:hover {
 	background-color: var(--background-color);
 }
 
-main.videos nav .go-home-button {
+main.videos nav .nav-control-button {
+	margin-left: 10px;
 	width: 60px;
 	height: 60px;
 	padding: 10px;
@@ -147,9 +174,64 @@ main.videos nav .go-home-button {
 	cursor: pointer;
 	transition: .2s;
 }
-main.videos nav .go-home-button svg {
+main.videos nav .nav-control-button svg {
 	width: 100%;
 }
+
+@media screen and (max-width: 1300px) {
+	main.videos nav ul {
+		padding: 5px;
+		overflow-x: scroll;
+		gap: 15px;
+	}
+	
+}
+
+@media screen and (max-width: 800px) {
+	main.videos nav {
+		padding: 6px;
+	}
+	main.videos nav ul li a {
+		height: 40px;
+		font-size: 0.75em;
+	}
+	main.videos nav .nav-control-button {
+		height: 40px;
+		width: 40px;
+		padding: 6px;
+	}
+}
+
+/* @media screen and (max-width: 600px) {
+	.transparent {
+		opacity: 0;
+		pointer-events: none;
+	}
+	#video-burger {
+		display: flex;
+	}
+	main.videos nav {
+		position: relative;
+	}
+	main.videos nav .logo {
+		flex: 1;
+	}
+	main.videos nav ul {
+		position: absolute;
+		flex-direction: column;
+		background-color: var(--background-color);
+		padding: 10px;
+		border-radius: 15px;
+		box-shadow: var(--base-shadow);
+		top: 0;
+		right: 0;
+		transform: translateY(-102%) translateX(-20px);
+	}
+	main.videos nav ul li a {
+		padding: 5px;
+		height: 40px;
+	}
+} */
 
 /* -------------------- VIDEOS PAGES -------------------- */
 
@@ -196,4 +278,18 @@ main.video nav {
 	width: 40px;
 }
 
+@media screen and (max-width: 800px) {
+	.video-name h1 {
+		font-size: 1.3em;
+	}
 
+	.video-controls button {
+		width: 40px;
+		height: 40px;
+	}
+
+	.video-controls button svg {
+		width: 30px;
+		height: 30px;
+	}
+}
