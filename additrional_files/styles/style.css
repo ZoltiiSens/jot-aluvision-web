@@ -16,6 +16,7 @@
 
 body {
 	background-color: var(--background-color);
+	font-family: Lato, sans-serif;
 }
 
 main.index {
@@ -50,7 +51,6 @@ main.index nav .nav-ul a {
 	box-shadow: var(--base-shadow);
 	background-color: var(--background-color-light);
 	transition: .2s ease-in;
-	font-family: Lato, sans-serif;
 	font-weight: bold;
 	font-size: 1.2em;
 	text-decoration: none;
@@ -65,7 +65,7 @@ main.index nav .nav-ul a:hover {
 main.index .logo-down {}
 
 
-/* -------------------- VIDEOS PAGES -------------------- */
+/* -------------------- MENU PAGES -------------------- */
 
 main.videos {
 	height: 100vh;
@@ -96,11 +96,20 @@ main.videos nav ul {
 	list-style-type: none;
 }
 
-main.videos nav ul li button {
+/* main.videos nav ul li {
+	width: 100%;
+	max-width: 180px;
+} */
+
+main.videos nav ul li a {
 	padding: 10px;
 	width: 100%;
-	height: 60px;
 	max-width: 180px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 	border-radius: 15px;
 	border: none;
 	box-shadow: var(--base-shadow);
@@ -108,28 +117,83 @@ main.videos nav ul li button {
 	font-size: 0.9em;
 	font-weight: bold;
 	text-transform: uppercase;
+	text-decoration: none;
 	color: var(--primary-color);
 	cursor: pointer;
 	transition: .2s;
 }
 
-main.videos nav ul li button:hover {
+main.videos nav ul li a:hover {
 	background-color: var(--background-color);
 }
 
-main.videos nav ul li button.go-home-button {
+main.videos nav .go-home-button {
 	width: 60px;
 	height: 60px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 15px;
+	border: none;
+	box-shadow: var(--base-shadow);
+	background-color: var(--background-color-light);
+	font-size: 0.9em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--primary-color);
+	cursor: pointer;
+	transition: .2s;
 }
-main.videos nav ul li button.go-home-button svg {
+main.videos nav .go-home-button svg {
 	width: 100%;
+}
+
+/* -------------------- VIDEOS PAGES -------------------- */
+
+main.video nav {
+	justify-content: space-between;
+	padding: 15px 25px;
+}
+
+.video-name h1 {
+	font-size: 2em;
+	color: var(--primary-color);
 }
 
 .video-controls {
 	position: absolute;
-	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
 }
 
-.video-controls {
-	background: inherit;
+.video-controls button {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	border: none;
+	background-color: var(--background-color-light);
+	box-shadow: var(--base-shadow);
+	transition: .2s;
 }
+
+.video-controls button:hover {
+	background-color: var(--background-color);
+}
+
+.video-controls button svg {
+	height: 40px;
+	width: 40px;
+}
+
+
