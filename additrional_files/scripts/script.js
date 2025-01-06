@@ -13,4 +13,10 @@
 // 	});
 // });
 
+let button = document.querySelector('.video-start-button')
+button.addEventListener('click', () => {
+	document.querySelector('#video-player').play();
+	button.style.display = 'none';
+})
+
 document.querySelector('#video-burger').addEventListener('click', () => document.querySelector('.video_ul').classList.toggle('transparent'))
